@@ -39,7 +39,7 @@ const BookDetailsPage = () => {
             setLoading(true);
             setError(null);
             try {
-                const response = await axios.get(`http://localhost:5000/api/books/${id}`);
+                const response = await axios.get(`https://book-explorer-backend-c83o.onrender.com/api/books/${id}`);
                 setBook(response.data);
             } catch (err) {
                 setError('Failed to fetch book details.');
