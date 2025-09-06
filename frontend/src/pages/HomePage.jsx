@@ -52,7 +52,7 @@ const HomePage = () => {
             if (ratingFilter) params.rating = ratingFilter;
             if (inStock) params.inStock = true;
 
-            const response = await axios.get('http://localhost:5000/api/books', { params });
+            const response = await axios.get('https://book-explorer-backend-c83o.onrender.com/api/books', { params });
             setBooks(response.data.books);
             setTotalPages(response.data.totalPages);
         } catch (err) {
