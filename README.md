@@ -1,4 +1,4 @@
-# Book Explorer Monorepo
+# Book Explorer
 
 This project is a full-stack application designed to scrape book data from `books.toscrape.com`, store it in a MongoDB database, upload book cover images to Cloudinary, and display the data through a React frontend. The project is structured as a monorepo with three main components:
 
