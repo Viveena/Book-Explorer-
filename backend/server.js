@@ -15,10 +15,10 @@ const corsOptions = {
   credentials: true,
 };
 
+// ✅ Use ONLY this line
 app.use(cors(corsOptions));
 
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
@@ -37,5 +37,3 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
