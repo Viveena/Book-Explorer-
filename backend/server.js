@@ -7,6 +7,16 @@ const bookRoutes = require('./routes/bookRoutes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const corsOptions = {
+  origin: [
+    "https://book-explorer-frontend-4ek8.onrender.com", // your Render frontend
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 // Middleware
 app.use(cors());
 app.use(express.json());
