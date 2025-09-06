@@ -1,6 +1,6 @@
 const path = require('path');
 const process = require('process');
-const fetch = require('node-fetch'); // needed if Node < 18
+const { default: fetch } = require('node-fetch'); // Import fetch specifically
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 const cloudinary = require('cloudinary').v2;
@@ -131,4 +131,5 @@ async function scrapeBooks() {
 
 // Run scraper
 scrapeBooks().catch(console.error);
+
 
